@@ -1,0 +1,413 @@
+/* NAVBAR */
+#desktop-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    padding: 1rem 2rem;
+    width: 90%;
+    z-index: 1000;
+  }
+
+  
+  /* Logos */
+  .nav-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+  
+  .logo-dsi {
+    height: 120px;
+    width: auto;
+    object-fit: contain;
+    margin-top: -35px;
+  }
+  
+  .logo-mentor {
+    height: 50px; 
+    width: auto;
+    object-fit: contain;
+  }
+  
+  /* Nav Links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin-top: 0.25rem; /* minor tweak for alignment */
+  }
+  
+  .nav-links a {
+    text-decoration: none;         
+    color: black;                  
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;              /* Bold */
+    font-size: 26px;               /* 👈 Big text */
+    transition: opacity 0.2s ease;
+  }
+  
+  .nav-links a:hover {
+    opacity: 0.7;                 
+  }
+
+  /* BACKGROUND */
+  body {
+
+      background:linear-gradient(90deg, rgb(248, 244, 244) 0%, rgba(255,255,255,1) 20%, rgba(251, 214, 115, 0.678) 80%);
+      background-attachment: fixed;
+  }
+
+  /* HERO SECTION */
+.hero {
+    text-align: left;
+    padding: 10rem 2rem 5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    /* margin-left: -10px; */
+    margin-top: -50px;
+  }
+  
+  .hero-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-icon {
+    height: 60px;
+    width: auto;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .hero-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 2rem;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .hero-button {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Space Grotesk', sans-serif;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #FFB347 0%, #FF6B6B 100%);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  .hero-button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+
+  .highlight {
+    background: linear-gradient(90deg, #FFB347 0%, #FF6B6B 100%);
+    background-clip: text;               
+    -webkit-background-clip: text;        
+    -webkit-text-fill-color: transparent; 
+    color: transparent;  
+  }
+
+
+  /* ABOUT */
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4rem;
+    padding: 10rem 4rem 6rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: -50px;
+  }
+  
+  .about-images {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: left;
+  }
+  
+  .about-images img {
+    width: 185px;
+    height: 185px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+
+  .img-maxine {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    transform: translate(-200px, 50px);
+  }
+  
+  .img-vincy {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    transform: translateY(60px); 
+  }
+  
+  .img-isobel {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    transform: translate(-280px, -60px); 
+  }
+  
+  .about-text {
+    max-width: 600px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .about-text h2 {
+    font-size: 32px;
+    margin-bottom: 0.75rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+  }
+  
+  .about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  /* Insights Page */
+.insights-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .insights-page h1 {
+    font-size: 48px;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    color: #000;
+  }
+  
+  .insight-preview {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .insight-preview h2 {
+    font-size: 28px;
+    color: #222;
+    margin-bottom: 0.5rem;
+  }
+  
+  .insight-preview p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .more-button {
+    display: inline-block;
+    background: linear-gradient(90deg, #FFB347 0%, #FF6B6B 100%);
+    color: white;
+    padding: 0.6rem 1.5rem;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  
+  .more-button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+
+  /* insight page */ 
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    color: #004080;
+    margin-bottom: 10px;
+  }
+  
+  .blurb {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .insight-image {
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .back-link {
+    display: inline-block;
+    margin-top: 40px;
+    color: #004080;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .back-link:hover {
+    text-decoration: underline;
+  }
+
+  /* RAG MODEL */ 
+.rag-container {
+  max-width: 700px;
+  margin: 100px auto;
+  padding: 2rem;
+  background-color: rgba(255, 191, 116, 0.3); /* opaque orange */
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 400px;
+  position: relative;
+}
+
+/* Title */
+.chat-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Chatbox area */
+#chat-box {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 1.5rem;
+}
+
+/* Response bubble */
+.chat-bubble.bot {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  max-width: 90%;
+  margin-bottom: 1rem;
+  white-space: pre-wrap;
+}
+
+/* Input form */
+.query-form {
+  display: flex;
+  gap: 1rem;
+}
+
+.query-form input[type="text"] {
+  flex: 1;
+  padding: 0.75rem;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.query-form button {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(90deg, #FFB347 0%, #FF6B6B 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-family: 'Space Grotesk', sans-serif;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.query-form button:hover {
+  opacity: 0.9;
+}
+
+#response-box {
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically */
+  min-height: 60px;        /* or whatever size you want */
+  text-align: center;
+}
+
+.dots::after {
+  content: 'thinking';
+  display: inline-block;
+  width: 11ch; /* enough space for "thinking..." */
+  text-align: center;
+  animation: dots 1.2s steps(4, end) infinite;
+  font-size: 23px;
+  font-weight: 500;
+  white-space: pre;
+}
+  
+@keyframes dots {
+  0%   { content: 'thinking'; }
+  25%  { content: 'thinking.'; }
+  50%  { content: 'thinking..'; }
+  75%  { content: 'thinking...'; }
+  100% { content: 'thinking'; }
+}
+
+
+
+
+  
+  
+  
+  

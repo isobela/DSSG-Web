@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Home</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Main stylesheet (served from Flask static folder) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+  <nav id="desktop-nav">
+    <div class="nav-left">
+      <img src="{{ url_for('static', filename='assets/DSI-logo.png') }}" alt="Logo 1" class="logo-dsi">
+      <img src="{{ url_for('static', filename='assets/mentor-canada-logo.png') }}" alt="Logo 2" class="logo-mentor">
+    </div>
+    <ul class="nav-links">
+      <li><a href="{{ url_for('home') }}">Home</a></li>
+      <li><a href="{{ url_for('about') }}">About</a></li>
+      <li><a href="{{ url_for('insights') }}">Insights</a></li>
+      <li><a href="{{ url_for('model') }}">Model</a></li>
+    </ul>
+  </nav>
+
+
+    <!-- Main RAG section -->
+    <div class="rag-container">
+      <h2 class="chat-title">Ask the RAG Model</h2>
+      
+      <div id="chat-box">
+        <div id="response-box" class="chat-bubble bot">
+          <span id="thinking-dots" style="display: none;"><span class="dots"></span></span>
+          <span id="response-text"></span>
+        </div>
+      </div>
+    
+      <form id="query-form" class="query-form">
+        <input type="text" id="query-input" placeholder="Type your question..." required>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <!-- Client-side interaction -->
+    <script>
+      document.getElementById("query-form").addEventListener("submit", async function (e) {
+        e.preventDefault();
+    
+        const query = document.getElementById("query-input").value;
+        const thinkingDots = document.getElementById("thinking-dots");
+        const responseText = document.getElementById("response-text");
+    
+        responseText.innerText = "";
+        thinkingDots.style.display = "inline";
+    
+        try {
+          const res = await fetch("/ask", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: `query=${encodeURIComponent(query)}`
+          });
+    
+          const data = await res.json();
+          thinkingDots.style.display = "none";
+          responseText.innerText = data.answer;
+        } catch (error) {
+          thinkingDots.style.display = "none";
+          responseText.innerText = "Something went wrong. Please try again.";
+          console.error("Error:", error);
+        }
+      });
+    </script>
+
+  </body>
+</html>

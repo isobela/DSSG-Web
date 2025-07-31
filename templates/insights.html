@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insights | Mentorship Project</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <!-- Navigation -->
+<!-- Navigation -->
+<nav id="desktop-nav">
+  <div class="nav-left">
+    <img src="{{ url_for('static', filename='assets/DSI-logo.png') }}" alt="Logo 1" class="logo-dsi">
+    <img src="{{ url_for('static', filename='assets/mentor-canada-logo.png') }}" alt="Logo 2" class="logo-mentor">
+  </div>
+  <ul class="nav-links">
+    <li><a href="{{ url_for('home') }}">Home</a></li>
+    <li><a href="{{ url_for('about') }}">About</a></li>
+    <li><a href="{{ url_for('insights') }}">Insights</a></li>
+    <li><a href="{{ url_for('model') }}">Model</a></li>
+  </ul>
+</nav>
+
+  <!-- Insights Content -->
+  <section class="insights-page">
+    <h1>Key Insights</h1>
+
+    <div class="insight-preview">
+      <h2>Mentorship for Youth from <span class="highlight">Low Socioeconomic Status (SES)</span> Backgrounds</h2>
+      <p>Youth from lower socioeconomic backgrounds often face systemic disadvantages. This work explores how mentorship can help close opportunity gaps.</p>
+      <a href="insight-ses.html" class="more-button">Read More</a>
+    </div>
+
+    <div class="insight-preview">
+      <h2>The Building Blocks of <span class="highlight">Quality Mentorship</span></h2>
+      <p>Here, we explore the factors that influence mentorship quality, aiming to identify characteristics that can help match mentors and mentees in the most effective way.</p>
+      <a href="insight-ses.html" class="more-button">Read More</a>
+    </div>
+
+    <div class="insight-preview">
+      <h2>How Does <span class="highlight">Parent Education</span> Effect Youth?</h2>
+      <p>Here, we explore how youth whose parents did not pursue further education benefit from mentorship, and where providing a mentor could help increase educational attainment.</p>
+      <a href="insight-mentalhealth.html" class="more-button">Read More</a>
+    </div>
+
+  </section>
+
+</body>
+</html>

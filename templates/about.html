@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Mentorship Project</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Shared styles -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="desktop-nav">
+    <div class="nav-left">
+      <img src="{{ url_for('static', filename='assets/DSI-logo.png') }}" alt="Logo 1" class="logo-dsi"> 
+      <img src="{{ url_for('static', filename='assets/mentor-canada-logo.png') }}" alt="Logo 2" class="logo-mentor"> 
+    </div>
+    <ul class="nav-links">
+      <li><a href="{{ url_for('home') }}">Home</a></li>
+      <li><a href="{{ url_for('about') }}">About</a></li>
+      <li><a href="{{ url_for('insights') }}">Insights</a></li>
+      <li><a href="{{ url_for('model') }}">Model</a></li>
+    </ul>
+  </nav>
+
+  <!-- About Section -->
+  <section class="about-content">
+    <div class="about-images">
+      <img src="{{ url_for('static', filename='assets/maxine.jpg') }}" alt="Maxine" class="img-maxine">
+      <img src="{{ url_for('static', filename='assets/vincy.jpeg') }}" alt="Vincy" class="img-vincy">
+      <img src="{{ url_for('static', filename='assets/me.jpg') }}" alt="Isobel" class="img-isobel">
+    </div>
+
+    <div class="about-text">
+      <h2>About Us</h2>
+      <p>
+        We’re students at the University of British Columbia, currently completing a summer fellowship with the UBC Data Science Institute as 
+        Data Science for Social Good Fellows. While we come from diverse backgrounds, we share a passion for data science and its real-world applications. 
+        This project gave us the chance to explore the field in depth and collaborate to build something meaningful.
+      </p>
+
+      <h2>Our Project</h2>
+      <p>
+        Mentor Canada advocates for equitable access to high-quality mentorship for youth across Canada, recognizing that mentors can positively shape future-planning skills and career outcomes. However, barriers such as lower socioeconomic status (SES) often limit access to mentorship.
+      </p>
+      <p>
+        Using a rich survey dataset of over 2,800 responses, our team applied data science techniques to uncover hidden patterns and inequities. This project aims to advance mentorship practices and raise public awareness of its value. By translating data-driven insights 
+        into actionable recommendations, we hope to support families, educators, and policymakers, and deepen understanding of mentorship’s real impact.
+      </p>
+    </div>
+  </section>
+
+</body>
+</html>
+
+  
