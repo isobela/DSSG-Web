@@ -1,0 +1,24 @@
+name: dssg_env
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - conda
+  - python=3.10
+  - pip
+  - jupyter
+  - nbformat
+  - quarto
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - siuba
+  - plotly
+  - langchain # LLM library for NLP 
+  - chromadb # vector storage
+  - pypdf # loading PDFs
+  - pytest # unit tests
+  - python-dotenv
+  - pip:
+     - langchain-pinecone # for vector embeddings with cosine similarity
+     - pinecone-client
